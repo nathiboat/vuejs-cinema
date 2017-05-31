@@ -5,9 +5,20 @@ import genres from './util/genres';
 
 new Vue({
   el: '#app',
+  data:{
+    genre: [],
+    time: []
+  },
   methods:{
-    checkFilter(){
-
+    checkFilter(category, title, checked){
+      if(checked){
+        this[category].push(title);
+      }else{
+        let index = this[category].indexOf(title);
+        if(index > -1){
+          this[category].splice(index, 1);
+        }
+      }
     }
   },
   components: {
@@ -23,7 +34,10 @@ new Vue({
             {title: 'movie 3'}
           ]
         }
-      }
+      },
+      props:[
+
+      ]
     },
     'movie-filter':{
       data(){
@@ -65,8 +79,5 @@ new Vue({
         }
       }
     }
-  },
-  data: {
-    msg: 'heelow word'
   }
 });
