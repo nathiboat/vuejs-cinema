@@ -7,7 +7,7 @@
         </div>
         <h3>By genre</h3>
         <div class="filter-group">
-            <check-filter v-for="genre in genres" category="genere" v-bind:title="genre" v-on:check-filter="checkFilter"></check-filter>
+            <check-filter v-for="genre in genres" category="genre" v-bind:title="genre" v-on:check-filter="checkFilter"></check-filter>
         </div>
     </div>
 </template>
