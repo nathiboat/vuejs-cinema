@@ -3,7 +3,8 @@
         <movie-item v-for="movie in filteredMovies" class="movie"
                     v-bind:movie="movie.movie"
                     v-bind:sessions="movie.sessions"
-                    v-bind:day="day"> {{ movie.movie.Title }}</movie-item>
+                    v-bind:day="day"
+                    v-bind:time="time"> {{ movie.movie.Title }}</movie-item>
     </div>
 </template>
 
