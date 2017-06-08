@@ -8,8 +8,8 @@ module.exports = {
     './src/main.js'
   ],
   output: {
-    path: path.resolve(__dirname, './vuejs-cinema/dist'),
-    publicPath: '/vuejs-cinema/dist/',
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
     filename: 'build.js'
   },
   module: {
